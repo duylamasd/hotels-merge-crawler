@@ -336,6 +336,7 @@ class HotelCrawler:
 
     async def cleanup(self):
         await self.sources.cleanup()
+        await self.db_manager.close()
 
     async def crawl(self):
         await self.sources.crawl_all()
