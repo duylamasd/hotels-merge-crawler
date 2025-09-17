@@ -18,3 +18,14 @@ For the complete documentation, please visit this [repository](https://github.co
   ```bash
   python src/main.py
   ```
+
+
+Alternatively, you can use Docker to run the crawler:
+- Build the Docker image:
+  ```bash
+  docker build -t hotels-merge-crawler .
+  ```
+- Run the Docker container with the environment variables contained in the `.env` file:
+  ```bash
+  docker run --env-file ./.env hotels-merge-crawler
+  ```
